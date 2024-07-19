@@ -1,0 +1,54 @@
+<div class="uk-animation-slide-right">
+  <div class="uk-card uk-card-default">
+    <app-loading></app-loading>
+    <div class="uk-card-header">
+      <div class="uk-grid-small uk-flex-middle" uk-grid>
+        <div class="uk-width-expand">
+          <h3 class="uk-card-title uk-margin-remove-bottom">Hồ sơ của tôi</h3>
+          <p class="uk-text-meta uk-margin-remove-top">
+            Quản lý thông tin hồ sơ của bạn
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="uk-card-body">
+      <div class="row">
+        <div class="col-3">
+          <div class="d-flex align-items-center">
+            <span uk-icon="icon: user" class="m-2"></span>
+            <p class="mt-3">Tên đăng nhập:</p>
+          </div>
+          <div class="d-flex align-items-center">
+            <span uk-icon="icon: user" class="m-2"></span>
+            <p class="mt-3">Họ và tên:</p>
+          </div>
+          <div class="d-flex align-items-center">
+            <span uk-icon="icon: mail" class="m-2"></span>
+            <p class="mt-3">Email:</p>
+          </div>
+          <div class="d-flex align-items-center">
+            <span uk-icon="icon: location" class="m-2"></span>
+            <p class="mt-3">Địa chỉ: </p>
+          </div>
+        </div>
+        <div class="col-9">
+          <div class="d-flex align-items-center">
+            <p class="mt-3">{{user.username}}</p>
+          </div>
+          <div class="d-flex align-items-center">
+            <p class="mt-3">{{user.firstName}} {{user.lastName}}</p>
+          </div>
+          <div class="d-flex align-items-center">
+            <p class="mt-3">{{user.email}}</p>
+          </div>
+          <div class="d-flex align-items-center">
+            <p class="mt-3">{{user.address}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="uk-card-footer text-end">
+      <button routerLink="" class="btn border-primary rounded-pill py-3 px-5 text-primary">Chỉnh sửa</button>
+    </div>
+  </div>
+</div>

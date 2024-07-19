@@ -1,0 +1,8 @@
+<div class="pagination d-flex justify-content-center">
+  <button (click)="onPageChange(currentPage - 1)" class="btn border-primary rounded text-primary" [disabled]="isHasPrev">&laquo;</button>
+  <button *ngFor="let page of pages" [ngClass]="{ 'active text-white': page === currentPage, 'rounded': true }" class="btn border-primary rounded text-primary"
+     (click)="onPageChange(page)">
+    {{ page }}
+  </button>
+  <button (click)="onPageChange(currentPage + 1)" class="btn border-primary rounded text-primary" [disabled]="isHasNext">&raquo;</button>
+</div>

@@ -1,0 +1,97 @@
+<app-navbar></app-navbar>
+<div class="hero-header"></div>
+<div class="container-fluid bg-light">
+  <div class="py-5">
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-3 uk-animation-slide-left">
+            <ul class="uk-nav-default uk-navbar-dropdown-nav" uk-nav>
+              <li class="uk-parent mb-2 rounded" [ngClass]="{'uk-open' : active$.value === 'users-management'}">
+                <a href="#" class="ts-16 rounded text-start p-2 ps-3"
+                   [ngClass]="{'bg-primary text-white' : (active$ | async) === 'users-management'}"
+                   (click)="setActive('users-management')">
+                  <span uk-icon="icon: users" class="me-2"></span>
+                  Quản lý người dùng
+                  <span uk-nav-parent-icon></span>
+                </a>
+                <ul class="uk-nav-sub">
+                  <li [ngClass]="{'uk-active': activeItem === 'users'}" (click)="setActiveItem('users')">
+                    <a [ngClass]="{'text-primary': activeItem === 'users'}" routerLink="/admin/users"
+                       class="ts-16 mb-2 ps-5">
+                      Danh sách người dùng
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="uk-parent mb-2 rounded" [ngClass]="{'uk-open' : (active$ | async) === 'product-management'}">
+                <a href="#" class="ts-16 rounded text-start p-2 ps-3"
+                   [ngClass]="{'bg-primary text-white' : (active$ | async) === 'product-management'}"
+                   (click)="setActive('product-management')">
+                  <span uk-icon="icon: bag" class="me-2"></span>
+                  Quản lý sản phẩm
+                  <span uk-nav-parent-icon></span>
+                </a>
+                <ul class="uk-nav-sub">
+                  <li [ngClass]="{'uk-active': activeItem === 'products'}"
+                      (click)="setActiveItem('products')">
+                    <a [ngClass]="{'text-primary': activeItem === 'products'}" routerLink="/admin/products"
+                       class="ts-16 mb-2 ps-5">
+                      Danh sách sản phẩm
+                    </a>
+                  </li>
+                  <li [ngClass]="{'uk-active': activeItem === 'product-create'}"
+                      (click)="setActiveItem('product-create')">
+                    <a [ngClass]="{'text-primary': activeItem === 'product-create'}"
+                       routerLink="/admin/product/create"
+                       class="ts-16 mb-2 ps-5">
+                      Thêm mới sản phẩm
+                    </a>
+                  </li>
+                  <li [ngClass]="{'uk-active': activeItem === 'categories'}"
+                      (click)="setActiveItem('categories')">
+                    <a [ngClass]="{'text-primary': activeItem === 'categories'}"
+                       routerLink="/admin/categories"
+                       class="ts-16 mb-2 ps-5">
+                      Danh sách loại sản phẩm
+                    </a>
+                  </li>
+                  <li [ngClass]="{'uk-active': activeItem === 'category-create'}"
+                      (click)="setActiveItem('category-create')">
+                    <a [ngClass]="{'text-primary': activeItem === 'category-create'}"
+                       routerLink="/admin/category/create"
+                       class="ts-16 mb-2 ps-5">
+                     Thêm mới loại sản phẩm
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="uk-parent mb-2 rounded" [ngClass]="{'uk-open' : (active$ | async) === 'cart'}">
+                <a href="#"
+                   class="ts-16 rounded text-start p-2 ps-3"
+                   [ngClass]="{'bg-primary text-white' : (active$ | async) === 'cart'}"
+                   (click)="setActive('cart')">
+                  <span uk-icon="icon: cart" class="me-2"></span>
+                  Đơn hàng
+                  <span uk-nav-parent-icon></span>
+                </a>
+                <ul class="uk-nav-sub">
+                  <li [ngClass]="{'uk-active': activeItem === 'cart-history'}"
+                      (click)="setActiveItem('change-password')"><a
+                    [ngClass]="{'text-primary': activeItem === 'cart-history'}"
+                    routerLink="/my-profile/change-password"
+                    class="ts-16 mb-2 ps-5">Danh sách đơn hàng</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="col-9 uk-animation-slide-right">
+            <router-outlet></router-outlet>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

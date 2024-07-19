@@ -1,0 +1,77 @@
+@use '/custom-theme.scss';
+
+/*@include mat.core();*/
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.switchery-disabled {
+  opacity: 1; /* Giữ nguyên màu sắc mà không thay đổi độ mờ */
+  pointer-events: none; /* Ngăn chặn sự tương tác */
+}
+
+.card-header {
+  background-color: white !important;
+}
+
+.ts-16 {
+  font-size: 16px;
+}
+
+a:hover,
+.uk-link:hover,
+.uk-link-toggle:hover .uk-link {
+  color: #0f6ecd;
+  text-decoration: none;
+}
+
+.btn.border-primary:hover {
+  background-color: #81c408 !important;
+  color: white !important;
+}
+
+.btn.border-secondary:hover {
+  background-color: white !important;
+  color: #ffb524 !important;
+}
+
+a.text-primary:hover {
+  color: #ffb524 !important
+}
+
+.text-error {
+  bottom: -26px;
+  color: #dc3545;
+  font-size: 0.875em;
+}
+
+.btn.btn-primary.border-primary:hover {
+  color: #81c408 !important;
+  background-color: white !important;
+}
+
+.btn.btn-secondary.border-secondary:hover {
+  color: white !important;
+  background-color: #ffb524 !important;
+}
+
+.image-preview {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.thumbnail {
+  max-width: 100px;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.mt-152 {
+  margin-top: 152px!important;
+}
